@@ -48,6 +48,7 @@ export interface PortfolioData {
       date: string;
       awarder: string;
       summary: string;
+      iframeUrl?: string;
     }[];
     sections: string[];
   }
@@ -145,19 +146,22 @@ export interface PortfolioData {
         "title": "Java(Basic) Certificate",
         "date": "July 2023",
         "awarder": "HackerRank",
-        "summary": "Demonstrated proficiency in foundational Java programming concepts, including variables, data types, operators, control flow statements, and basic object-oriented programming principles"
+        "summary": "Demonstrated proficiency in foundational Java programming concepts, including variables, data types, operators, control flow statements, and basic object-oriented programming principles",
+        "iframeUrl": "https://www.hackerrank.com/certificates/iframe/ceeba6823ac7"
       },
       {
         "title": "Problem Solving(Intermediate) Certificate",
         "date": "Aug 2023",
         "awarder": "HackerRank",
-        "summary": "Demonstrated the ability to approach and solve intermediate-level algorithmic challenges using problem-solving techniques and data structures."
+        "summary": "Demonstrated the ability to approach and solve intermediate-level algorithmic challenges using problem-solving techniques and data structures.",
+        "iframeUrl": "https://www.hackerrank.com/certificates/iframe/956c5677d9f7"
       },
       {
         "title": "SQL (Intermediate)",
         "date": "Nov 2025",
         "awarder": "HackerRank",
-        "summary": "Demonstrated the ability to build complex queries, optimize data retrieval, and work effectively with relational databases."
+        "summary": "Demonstrated the ability to build complex queries, optimize data retrieval, and work effectively with relational databases.",
+        "iframeUrl": "https://www.hackerrank.com/certificates/iframe/4a528488a787"
       }
     ],
     "sections": [
