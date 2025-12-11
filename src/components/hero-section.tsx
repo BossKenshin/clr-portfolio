@@ -11,7 +11,7 @@ type HeroSectionProps = {
 export function HeroSection({ basics }: HeroSectionProps) {
   return (
     <section id="home" className="w-full pt-24 md:pt-32 lg:pt-48 xl:pt-64">
-      <div className="container px-4 md:px-6">
+      <div className="container grid items-center justify-center px-4 md:px-6">
         <div className="mx-auto grid max-w-5xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="flex flex-col items-center justify-center space-y-6 text-center lg:items-start lg:text-left">
             <div className="space-y-4">
