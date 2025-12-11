@@ -9,7 +9,7 @@ const CardGlass = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <Card
     ref={ref}
-    className={className}
+    className={cn("bg-card/80 backdrop-blur-sm", className)}
     {...props}
   />
 ))
