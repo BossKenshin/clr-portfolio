@@ -23,9 +23,9 @@ export function SkillsSection({ skills, title }: SkillsSectionProps) {
             </p>
           </div>
         </div>
-        <div className="mx-auto grid max-w-5xl justify-items-center gap-6 py-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-6 py-12">
           {validSkills.map((skillGroup, index) => (
-            <CardGlass key={index} className="flex flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+            <CardGlass key={index} className="flex flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)]">
               <CardGlassHeader className='flex-row items-center gap-4'>
                 <div className="rounded-full bg-accent/20 p-3">
                   <Code className="h-6 w-6 text-accent" />
