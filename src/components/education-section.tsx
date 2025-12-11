@@ -20,9 +20,9 @@ export function EducationSection({ education }: EducationSectionProps) {
             </p>
           </div>
         </div>
-        <div className="mx-auto mt-12 grid max-w-5xl gap-8">
+        <div className="mx-auto mt-12 grid max-w-5xl justify-items-center gap-8">
           {education.map((edu, index) => (
-            <CardGlass key={index} className="transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+            <CardGlass key={index} className="transition-transform duration-300 hover:scale-105 hover:shadow-xl w-full">
               <CardGlassHeader className="grid grid-cols-[auto_1fr] items-start gap-4 space-y-0">
                 <div className="rounded-full bg-accent/20 p-3">
                   <GraduationCap className="h-6 w-6 text-accent" />

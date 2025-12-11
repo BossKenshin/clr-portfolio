@@ -34,7 +34,7 @@ export function AwardsSection({ awards, title }: AwardsSectionProps) {
             </p>
           </div>
         </div>
-        <div className="mx-auto grid max-w-5xl gap-6 py-12 sm:grid-cols-1 md:grid-cols-2">
+        <div className="mx-auto grid max-w-5xl justify-items-center gap-6 py-12 sm:grid-cols-1 md:grid-cols-2">
           {awards.map((award, index) => (
             <CardGlass key={index} className="flex flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl">
               <CardGlassHeader className="flex-row items-start gap-4">
