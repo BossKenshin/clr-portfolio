@@ -26,7 +26,7 @@ export default function Home() {
         <AwardsSection awards={awards} title={headings.awards} />
         <ContactSection />
       </main>
-      <footer className="bg-primary py-6 text-center text-sm text-muted-foreground">
+      <footer className="bg-secondary py-6 text-center text-sm text-muted-foreground">
         <div className="container">
           <Separator className="mb-4" />
           <p>&copy; {new Date().getFullYear()} {basics.name}. All rights reserved.</p>

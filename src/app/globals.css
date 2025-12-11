@@ -4,40 +4,40 @@
 
 @layer base {
   :root {
-    --background: 50 100% 94%; /* cornsilk */
-    --foreground: 72 11% 24%; /* darker palm-leaf */
+    --background: 210 100% 98%; /* Almost white with a blue tint */
+    --foreground: 210 50% 32%; /* Dark blue */
 
-    --card: 49 62% 88%; /* lighter vanilla-custard-2 */
-    --card-foreground: 72 11% 24%;
+    --card: 210 100% 100%;
+    --card-foreground: 210 50% 32%;
 
-    --popover: 50 100% 94%;
-    --popover-foreground: 72 11% 24%;
+    --popover: 210 100% 100%;
+    --popover-foreground: 210 50% 32%;
 
-    --primary: 72 11% 54%; /* palm-leaf */
-    --primary-foreground: 50 100% 94%; /* cornsilk */
+    --primary: 210 50% 32%; /* Dark blue */
+    --primary-foreground: 45 100% 95%;
 
-    --secondary: 49 62% 84%; /* vanilla-custard-2 */
-    --secondary-foreground: 72 11% 24%;
+    --secondary: 347 86% 94%; /* Light pink */
+    --secondary-foreground: 210 50% 32%;
 
-    --muted: 49 62% 88%;
-    --muted-foreground: 72 11% 40%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 210 40% 46.1%;
     
-    --accent: 57 64% 73%; /* light-gold */
-    --accent-foreground: 72 11% 24%;
+    --accent: 347 86% 64%; /* Pink */
+    --accent-foreground: 355 100% 97%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 57 64% 68%;
-    --input: 57 64% 83%;
-    --ring: 59 98% 84%;
+    --border: 210 40% 90%;
+    --input: 210 40% 92%;
+    --ring: 45 93% 68%; /* Yellow */
     
     --radius: 0.5rem;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --chart-1: 210 50% 32%;
+    --chart-2: 347 86% 64%;
+    --chart-3: 45 93% 68%;
+    --chart-4: 210 50% 62%;
+    --chart-5: 347 86% 84%;
   }
 
   .dark {

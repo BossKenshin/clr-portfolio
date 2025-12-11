@@ -1,79 +1,33 @@
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
+import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from "./ui/card"
 
 const CardGlass = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div
+  <Card
     ref={ref}
-    className={cn(
-      "rounded-lg border bg-card text-card-foreground shadow-sm",
-      className
-    )}
+    className={className}
     {...props}
   />
 ))
 CardGlass.displayName = "CardGlass"
 
-const CardGlassHeader = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-6", className)}
-    {...props}
-  />
-))
+const CardGlassHeader = CardHeader
 CardGlassHeader.displayName = "CardGlassHeader"
 
-const CardGlassTitle = React.forwardRef<
-  HTMLParagraphElement,
-  React.HTMLAttributes<HTMLHeadingElement>
->(({ className, ...props }, ref) => (
-  <h3
-    ref={ref}
-    className={cn(
-      "text-2xl font-semibold leading-none tracking-tight",
-      className
-    )}
-    {...props}
-  />
-))
+const CardGlassTitle = CardTitle
 CardGlassTitle.displayName = "CardGlassTitle"
 
-const CardGlassDescription = React.forwardRef<
-  HTMLParagraphElement,
-  React.HTMLAttributes<HTMLParagraphElement>
->(({ className, ...props }, ref) => (
-  <p
-    ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
-    {...props}
-  />
-))
+const CardGlassDescription = CardDescription
 CardGlassDescription.displayName = "CardGlassDescription"
 
-const CardGlassContent = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
-))
+const CardGlassContent = CardContent
 CardGlassContent.displayName = "CardGlassContent"
 
-const CardGlassFooter = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn("flex items-center p-6 pt-0", className)}
-    {...props}
-  />
-))
+const CardGlassFooter = CardFooter
 CardGlassFooter.displayName = "CardGlassFooter"
 
 export { CardGlass, CardGlassHeader, CardGlassFooter, CardGlassTitle, CardGlassDescription, CardGlassContent }
