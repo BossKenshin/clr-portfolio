@@ -23,7 +23,7 @@ export function SkillsSection({ skills, title }: SkillsSectionProps) {
             </p>
           </div>
         </div>
-        <div className="mx-auto grid max-w-5xl items-center justify-center gap-6 py-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-5xl gap-6 py-12 sm:grid-cols-2 lg:grid-cols-3">
           {validSkills.map((skillGroup, index) => (
             <CardGlass key={index} className="flex flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl">
               <CardGlassHeader className='flex-row items-center gap-4'>

@@ -24,7 +24,7 @@ export function ExperienceSection({ work, title }: ExperienceSectionProps) {
             </p>
           </div>
         </div>
-        <div className="mx-auto grid max-w-3xl items-start justify-center gap-8 py-12">
+        <div className="mx-auto grid max-w-3xl gap-8 py-12">
           {validWork.map((job, index) => (
             <CardGlass key={index} className="transition-transform duration-300 hover:scale-105 hover:shadow-xl">
               <CardGlassHeader className='grid grid-cols-[auto_1fr] items-start gap-4 space-y-0'>
