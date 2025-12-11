@@ -7,6 +7,7 @@ import { ContactSection } from "@/components/contact-section";
 import { portfolioData } from "@/lib/portfolio-data";
 import { ProjectsSection } from "@/components/projects-section";
 import { EducationSection } from "@/components/education-section";
+import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   const { basics, work, skills, awards, projects, education, headings } = portfolioData;
@@ -25,8 +26,9 @@ export default function Home() {
         <AwardsSection awards={awards} title={headings.awards} />
         <ContactSection />
       </main>
-      <footer className="bg-muted py-6 text-center text-sm text-muted-foreground">
+      <footer className="bg-primary py-6 text-center text-sm text-muted-foreground">
         <div className="container">
+          <Separator className="mb-4" />
           <p>&copy; {new Date().getFullYear()} {basics.name}. All rights reserved.</p>
         </div>
       </footer>

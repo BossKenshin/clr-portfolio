@@ -18,7 +18,7 @@ export function AwardsSection({ awards, title }: AwardsSectionProps) {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-primary">{title}</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-accent">{title}</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Recognitions and certifications I've earned.
             </p>
@@ -29,7 +29,7 @@ export function AwardsSection({ awards, title }: AwardsSectionProps) {
             <CardGlass key={index} className="flex flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl">
               <CardGlassHeader className="flex-row items-center gap-4">
                 <div className="rounded-full bg-accent/20 p-3">
-                  <Award className="h-6 w-6 text-accent-foreground" />
+                  <Award className="h-6 w-6 text-accent" />
                 </div>
                 <div>
                   <CardGlassTitle className="font-headline">{award.title}</CardGlassTitle>

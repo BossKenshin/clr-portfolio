@@ -38,7 +38,7 @@ export function Header({ name }: HeaderProps) {
         <a
           key={link.href}
           href={link.href}
-          className="text-sm font-medium transition-colors hover:text-primary"
+          className="text-sm font-medium transition-colors hover:text-accent"
         >
           {link.label}
         </a>
@@ -50,7 +50,7 @@ export function Header({ name }: HeaderProps) {
     <header className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${isScrolled ? 'border-border bg-background/95 backdrop-blur' : 'border-transparent bg-background'}`}>
       <div className="container flex h-16 items-center">
         <Link href="#" className="mr-6 flex items-center gap-2" prefetch={false}>
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent text-accent-foreground">
             <span className="font-bold">{initials}</span>
           </div>
           <span className="hidden font-headline font-bold sm:inline-block">{name}</span>
@@ -69,7 +69,7 @@ export function Header({ name }: HeaderProps) {
             <SheetContent side="right">
               <nav className="grid gap-6 text-lg font-medium">
                 <Link href="#" className="flex items-center gap-2 text-lg font-semibold" prefetch={false}>
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent text-accent-foreground">
                     <span className="font-bold">{initials}</span>
                   </div>
                   <span className="sr-only">{name}</span>
