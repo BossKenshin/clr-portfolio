@@ -1,6 +1,6 @@
 import type { PortfolioData } from '@/lib/portfolio-data';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { CardGlass, CardGlassContent, CardGlassHeader, CardGlassTitle } from '@/components/card-glass';
 
 type SkillsSectionProps = {
   skills: PortfolioData['skills'];
@@ -24,16 +24,16 @@ export function SkillsSection({ skills, title }: SkillsSectionProps) {
         </div>
         <div className="mx-auto grid max-w-5xl gap-6 py-12 sm:grid-cols-2 lg:grid-cols-3">
           {validSkills.map((skillGroup, index) => (
-            <Card key={index} className="flex flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-              <CardHeader>
-                <CardTitle className="font-headline text-lg">{skillGroup.name}</CardTitle>
-              </CardHeader>
-              <CardContent className="flex flex-wrap gap-2">
+            <CardGlass key={index} className="flex flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+              <CardGlassHeader>
+                <CardGlassTitle className="font-headline text-lg">{skillGroup.name}</CardGlassTitle>
+              </CardGlassHeader>
+              <CardGlassContent className="flex flex-wrap gap-2">
                 {skillGroup.keywords.filter(k => k).map((keyword, kIndex) => (
                   <Badge key={kIndex} variant="secondary" className="text-sm transition-transform hover:scale-110 hover:bg-accent hover:text-accent-foreground">{keyword}</Badge>
                 ))}
-              </CardContent>
-            </Card>
+              </CardGlassContent>
+            </CardGlass>
           ))}
         </div>
       </div>

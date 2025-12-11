@@ -1,6 +1,7 @@
 import type { PortfolioData } from '@/lib/portfolio-data';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { CardGlass, CardGlassContent, CardGlassHeader, CardGlassTitle } from '@/components/card-glass';
+import { CardDescription } from './ui/card';
 
 type ExperienceSectionProps = {
   work: PortfolioData['work'];
@@ -24,25 +25,25 @@ export function ExperienceSection({ work, title }: ExperienceSectionProps) {
         </div>
         <div className="mx-auto grid max-w-5xl gap-8 py-12">
           {validWork.map((job, index) => (
-            <Card key={index} className="transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-              <CardHeader>
+            <CardGlass key={index} className="transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+              <CardGlassHeader>
                 <div className="flex flex-col items-start gap-2 md:flex-row md:items-center md:justify-between">
                   <div>
-                    <CardTitle className='font-headline'>{job.position}</CardTitle>
+                    <CardGlassTitle className='font-headline'>{job.position}</CardGlassTitle>
                     <CardDescription>{job.company}</CardDescription>
                   </div>
                   <Badge variant="outline">{job.startDate} - {job.endDate}</Badge>
                 </div>
                 <CardDescription>{job.location}</CardDescription>
-              </CardHeader>
-              <CardContent>
+              </CardGlassHeader>
+              <CardGlassContent>
                 <ul className="list-disc space-y-2 pl-5 text-muted-foreground">
                   {job.highlights.filter(h => h).map((highlight, hIndex) => (
                     <li key={hIndex}>{highlight}</li>
                   ))}
                 </ul>
-              </CardContent>
-            </Card>
+              </CardGlassContent>
+            </CardGlass>
           ))}
         </div>
       </div>

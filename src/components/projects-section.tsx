@@ -1,5 +1,5 @@
 import type { PortfolioData } from '@/lib/portfolio-data';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
+import { CardGlass, CardGlassContent, CardGlassDescription, CardGlassHeader, CardGlassTitle, CardGlassFooter } from '@/components/card-glass';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
@@ -28,19 +28,19 @@ export function ProjectsSection({ projects, title }: ProjectsSectionProps) {
         </div>
         <div className="mx-auto grid max-w-5xl gap-8 py-12 sm:grid-cols-1 md:grid-cols-2">
           {projects.map((project, index) => (
-            <Card key={index} className="flex flex-col overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-              <CardHeader>
-                <CardTitle className="font-headline">{project.name}</CardTitle>
-                <CardDescription>{project.description}</CardDescription>
-              </CardHeader>
-              <CardContent className="flex-grow">
+            <CardGlass key={index} className="flex flex-col overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+              <CardGlassHeader>
+                <CardGlassTitle className="font-headline">{project.name}</CardGlassTitle>
+                <CardGlassDescription>{project.description}</CardGlassDescription>
+              </CardGlassHeader>
+              <CardGlassContent className="flex-grow">
                 <div className="flex flex-wrap gap-2">
                   {project.keywords.filter(k => k).map((keyword, kIndex) => (
                     <Badge key={kIndex} variant="outline">{keyword}</Badge>
                   ))}
                 </div>
-              </CardContent>
-              <CardFooter>
+              </CardGlassContent>
+              <CardGlassFooter>
                 {project.url && (
                   <Button asChild variant="link" className="p-0 h-auto">
                     <Link href={project.url} target="_blank" rel="noopener noreferrer">
@@ -48,8 +48,8 @@ export function ProjectsSection({ projects, title }: ProjectsSectionProps) {
                     </Link>
                   </Button>
                 )}
-              </CardFooter>
-            </Card>
+              </CardGlassFooter>
+            </CardGlass>
           ))}
         </div>
       </div>

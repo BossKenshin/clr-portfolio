@@ -1,5 +1,5 @@
 import type { PortfolioData } from '@/lib/portfolio-data';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { CardGlass, CardGlassHeader, CardGlassTitle, CardGlassContent } from '@/components/card-glass';
 import { Briefcase, Calendar } from 'lucide-react';
 
 type EducationSectionProps = {
@@ -22,14 +22,14 @@ export function EducationSection({ education }: EducationSectionProps) {
         </div>
         <div className="mx-auto mt-12 grid max-w-5xl gap-8">
           {education.map((edu, index) => (
-            <Card key={index} className="transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-              <CardHeader className="grid items-start gap-4 space-y-0">
+            <CardGlass key={index} className="transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+              <CardGlassHeader className="grid items-start gap-4 space-y-0">
                 <div className="space-y-1">
-                  <CardTitle className="text-xl font-headline">{edu.institution}</CardTitle>
+                  <CardGlassTitle className="text-xl font-headline">{edu.institution}</CardGlassTitle>
                   <p className="text-muted-foreground">{edu.studyType} {edu.area}</p>
                 </div>
-              </CardHeader>
-              <CardContent>
+              </CardGlassHeader>
+              <CardGlassContent>
                 <div className="flex flex-col gap-2 text-sm text-muted-foreground sm:flex-row sm:items-center">
                   <div className="flex items-center gap-2">
                     <Calendar className="h-4 w-4" />
@@ -41,8 +41,8 @@ export function EducationSection({ education }: EducationSectionProps) {
                     <span>{edu.location}</span>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </CardGlassContent>
+            </CardGlass>
           ))}
         </div>
       </div>
