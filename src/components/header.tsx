@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
 
@@ -67,13 +67,17 @@ export function Header({ name }: HeaderProps) {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
+              <SheetHeader className="mb-6">
+                <SheetTitle className="text-left">
+                  <Link href="#" className="flex items-center gap-2" prefetch={false}>
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent text-accent-foreground">
+                      <span className="font-bold">{initials}</span>
+                    </div>
+                    <span className="font-headline font-bold">{name}</span>
+                  </Link>
+                </SheetTitle>
+              </SheetHeader>
               <nav className="grid gap-6 text-lg font-medium">
-                <Link href="#" className="flex items-center gap-2 text-lg font-semibold" prefetch={false}>
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent text-accent-foreground">
-                    <span className="font-bold">{initials}</span>
-                  </div>
-                  <span className="sr-only">{name}</span>
-                </Link>
                 {navLinks.map((link) => (
                   <a
                     key={link.href}
