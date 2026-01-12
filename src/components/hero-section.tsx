@@ -1,17 +1,28 @@
 import type { PortfolioData } from '@/lib/portfolio-data';
 import { Button } from '@/components/ui/button';
-import { Mail, Phone, MapPin, ArrowDown } from 'lucide-react';
+import { Mail, Phone, ArrowDown } from 'lucide-react';
 import Image from 'next/image';
 import placeholder from "@/lib/placeholder-images.json"
+import { cn } from '@/lib/utils';
 
 type HeroSectionProps = {
   basics: PortfolioData['basics'];
 };
 
+const BackgroundShapes = () => (
+    <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute top-[10%] left-[5%] h-24 w-24 rounded-full bg-accent/20 animate-[spin_20s_linear_infinite]" />
+        <div className="absolute bottom-[15%] right-[10%] h-32 w-32 rounded-lg bg-primary/20 animate-[spin_25s_linear_infinite_reverse]" />
+        <div className="absolute top-[25%] right-[20%] h-16 w-16 border-4 border-accent/30 animate-[spin_15s_linear_infinite]" />
+        <div className="absolute bottom-[5%] left-[20%] h-20 w-20 border-4 border-primary/30 rounded-full animate-[spin_18s_linear_infinite_reverse]" />
+    </div>
+)
+
 export function HeroSection({ basics }: HeroSectionProps) {
   return (
-    <section id="home" className="w-full pt-24 md:pt-32 lg:pt-48 xl:pt-64">
-      <div className="container grid items-center justify-center px-4 md:px-6">
+    <section id="home" className="relative w-full overflow-hidden pt-24 md:pt-32 lg:pt-48 xl:pt-64">
+      <BackgroundShapes />
+      <div className="container relative z-10 grid items-center justify-center px-4 md:px-6">
         <div className="mx-auto grid max-w-5xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="flex flex-col items-center justify-center space-y-6 text-center lg:items-start lg:text-left">
             <div className="space-y-4">
