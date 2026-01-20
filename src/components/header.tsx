@@ -15,7 +15,6 @@ const navLinks = [
   { href: '#experience', label: 'Experience' },
   { href: '#skills', label: 'Skills' },
   { href: '#awards', label: 'Awards' },
-  { href: '#contact', label: 'Contact' },
 ];
 
 export function Header({ name }: HeaderProps) {

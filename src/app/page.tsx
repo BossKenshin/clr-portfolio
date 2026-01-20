@@ -3,7 +3,6 @@ import { HeroSection } from "@/components/hero-section";
 import { ExperienceSection } from "@/components/experience-section";
 import { SkillsSection } from "@/components/skills-section";
 import { AwardsSection } from "@/components/awards-section";
-import { ContactSection } from "@/components/contact-section";
 import { portfolioData } from "@/lib/portfolio-data";
 import { ProjectsSection } from "@/components/projects-section";
 import { EducationSection } from "@/components/education-section";
@@ -24,7 +23,6 @@ export default function Home() {
         <SkillsSection skills={skills} title={headings.skills} />
         {validProjects.length > 0 && <ProjectsSection projects={validProjects} title={headings.projects} />}
         <AwardsSection awards={awards} title={headings.awards} />
-        <ContactSection />
       </main>
       <footer className="bg-secondary py-6 text-center text-sm text-muted-foreground">
         <div className="container">
