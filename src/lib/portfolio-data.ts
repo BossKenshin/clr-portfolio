@@ -88,13 +88,13 @@ export interface PortfolioData {
         "startDate": "October 2023",
         "endDate": "Present",
         "highlights": [
-          "Enhanced and maintained the Sales Information System Web by creating clear, effective, and manageable code utilizing frameworks like CodeIgniter and Laravel, server-side languages like PHP, and databases like SQL.",
-          "Developed and improved the Sales Information System by building user-friendly Android applications in Java, optimizing functionality, and ensuring smooth connectivity with server-side systems and databases.",
-          "Ensured the security of API endpoints, implementing authentication and authorization mechanisms to protect sensitive data.",
-          "Developed desktop applications using C# and the .NET framework, providing intuitive user interfaces and efficient functionality.",
-          "Implemented database queries and stored procedures to facilitate efficient data retrieval and manipulation.",
-          "Worked with cloud technologies in AWS, including EC2 for hosting, RDS for database management, S3 for storage, Route 53 for DNS management, and VPC for secure networking configurations.",
-          "Developed a Flutter/Dart mobile application using BLoC and Provider architecture for a sales information system, integrating real-time communication with backend servers."
+          "Maintained and enhanced a Sales Information System web platform using PHP, Laravel, CodeIgniter, and SQL.",
+          "Built Android applications in Java to support sales workflows and backend system connectivity.",
+          "Secured API endpoints with authentication and authorization controls to protect business data.",
+          "Developed C#/.NET desktop applications for internal operations with focused, practical user interfaces.",
+          "Created database queries and stored procedures for efficient reporting, retrieval, and data management.",
+          "Worked with AWS services including EC2, RDS, S3, Route 53, and VPC for hosting, storage, DNS, and networking.",
+          "Developed Flutter/Dart mobile features using BLoC and Provider architecture for real-time sales system workflows."
         ]
       },
       {
@@ -104,9 +104,9 @@ export interface PortfolioData {
         "startDate": "February 2023",
         "endDate": "July 2023",
         "highlights": [
-          "Worked with drive and determination to aid team success against software design and deployment targets",
-          "Used extensive practical and theoretical understanding of various coding languages to aid software development mainly using C# .Net, Entity Framework, MVC and LINQ",
-          "Identified and suggested software improvements to make it easier to use and eliminate user error."
+          "Supported software design, development, and deployment tasks as part of the engineering team.",
+          "Built and maintained features using C# .NET, Entity Framework, MVC, and LINQ.",
+          "Identified usability improvements that reduced user error and made internal tools easier to use."
         ]
       }
     ],
@@ -128,7 +128,32 @@ export interface PortfolioData {
         "keywords": [ "AWS (EC2, RDS, S3, Route 53, VPC)", "Git", "jQuery" ]
       }
     ],
-    "projects": [],
+    "projects": [
+      {
+        "name": "Sales Information System Web",
+        "description": "A business web platform for managing sales workflows, reporting, and operational data using PHP, Laravel, CodeIgniter, and SQL.",
+        "url": "",
+        "keywords": [ "PHP", "Laravel", "CodeIgniter", "SQL", "Bootstrap" ]
+      },
+      {
+        "name": "Sales Information System Mobile App",
+        "description": "A mobile application that supports field sales operations with backend connectivity, workflow updates, and real-time business data access.",
+        "url": "",
+        "keywords": [ "Flutter", "Dart", "Java", "BLoC", "Provider", "REST API" ]
+      },
+      {
+        "name": "Internal Desktop Operations Tools",
+        "description": "Desktop applications built for internal teams, focused on practical data entry, retrieval, and business process support.",
+        "url": "",
+        "keywords": [ "C#", ".NET", "MSSQL", "Stored Procedures" ]
+      },
+      {
+        "name": "AWS Application Infrastructure",
+        "description": "Cloud infrastructure work for hosting, database management, object storage, DNS routing, and secure network configuration.",
+        "url": "",
+        "keywords": [ "AWS EC2", "AWS RDS", "S3", "Route 53", "VPC" ]
+      }
+    ],
     "awards": [
       {
         "title": "Programmer of the Year",

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 type HeaderProps = {
   name: string;
@@ -57,10 +58,11 @@ export function Header({ name }: HeaderProps) {
         <nav className="hidden items-center gap-6 md:flex">
           {navItems}
         </nav>
-        <div className="ml-auto flex items-center md:hidden">
+        <div className="ml-auto flex items-center gap-2">
+          <ThemeToggle />
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="outline" size="icon">
+              <Button variant="outline" size="icon" className="md:hidden">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>

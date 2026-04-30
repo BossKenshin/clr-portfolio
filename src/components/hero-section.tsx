@@ -30,7 +30,7 @@ export function HeroSection({ basics }: HeroSectionProps) {
                 {basics.name}
               </h1>
               <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                A passionate Full Stack Developer with experience in building web and mobile applications using modern technologies.
+                Application Developer building web, mobile, and desktop systems with PHP, Laravel, CodeIgniter, Java, Flutter, Dart, C#, .NET, SQL, and AWS.
               </p>
             </div>
             <div className="flex flex-col gap-4 min-[400px]:flex-row flex-wrap justify-center lg:justify-start">
