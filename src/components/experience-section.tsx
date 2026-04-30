@@ -2,7 +2,7 @@ import type { PortfolioData } from '@/lib/portfolio-data';
 import { Badge } from '@/components/ui/badge';
 import { CardGlass, CardGlassContent, CardGlassHeader, CardGlassTitle } from '@/components/card-glass';
 import { CardDescription } from './ui/card';
-import { Briefcase } from 'lucide-react';
+import { Briefcase, CheckCircle2 } from 'lucide-react';
 
 type ExperienceSectionProps = {
   work: PortfolioData['work'];
@@ -10,44 +10,53 @@ type ExperienceSectionProps = {
 };
 
 export function ExperienceSection({ work, title }: ExperienceSectionProps) {
-  const validWork = work.filter(w => w.company && w.position);
+  const validWork = work.filter((w) => w.company && w.position);
   if (validWork.length === 0) return null;
 
   return (
-    <section id="experience" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+    <section id="experience" className="section-panel">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-primary">{title}</h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              My professional journey and accomplishments.
+        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.38fr_0.62fr]">
+          <div className="space-y-4">
+            <p className="section-kicker">Experience</p>
+            <h2 className="section-title">{title}</h2>
+            <p className="section-copy">
+              Practical production work across web platforms, mobile apps, APIs, databases, desktop tools, and AWS services.
             </p>
           </div>
-        </div>
-        <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-center gap-8 py-12">
-          {validWork.map((job, index) => (
-            <CardGlass key={index} className="transition-transform duration-300 hover:scale-105 hover:shadow-xl w-full">
-              <CardGlassHeader className='grid grid-cols-[auto_1fr] items-start gap-4 space-y-0'>
-                <div className="rounded-full bg-accent/20 p-3">
-                  <Briefcase className="h-6 w-6 text-accent" />
+
+          <div className="relative space-y-5 lg:before:absolute lg:before:left-6 lg:before:top-8 lg:before:h-[calc(100%-4rem)] lg:before:w-px lg:before:bg-border">
+            {validWork.map((job) => (
+              <div key={`${job.company}-${job.position}`} className="relative lg:pl-16">
+                <div className="absolute left-0 top-6 hidden h-12 w-12 items-center justify-center rounded-full border bg-card text-accent shadow-sm lg:flex">
+                  <Briefcase className="h-5 w-5" />
                 </div>
-                <div className="space-y-1">
-                    <CardGlassTitle className='font-headline'>{job.position}</CardGlassTitle>
-                    <div className="flex flex-col items-start gap-2 md:flex-row md:items-center md:justify-between">
-                      <CardDescription>{job.company}</CardDescription>
-                      <Badge variant="outline">{job.startDate} - {job.endDate}</Badge>
+                <CardGlass>
+                  <CardGlassHeader className="space-y-3">
+                    <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                      <div>
+                        <CardGlassTitle className="font-headline text-xl">{job.position}</CardGlassTitle>
+                        <CardDescription className="mt-1 text-base">{job.company}</CardDescription>
+                      </div>
+                      <Badge variant="outline" className="w-fit shrink-0">
+                        {job.startDate} - {job.endDate}
+                      </Badge>
                     </div>
-                </div>
-              </CardGlassHeader>
-              <CardGlassContent className='pl-[76px]'>
-                <ul className="list-disc space-y-2 pl-5 text-muted-foreground">
-                  {job.highlights.filter(h => h).map((highlight, hIndex) => (
-                    <li key={hIndex}>{highlight}</li>
-                  ))}
-                </ul>
-              </CardGlassContent>
-            </CardGlass>
-          ))}
+                  </CardGlassHeader>
+                  <CardGlassContent>
+                    <ul className="grid gap-3">
+                      {job.highlights.filter(Boolean).map((highlight, index) => (
+                        <li key={index} className="flex gap-3 text-sm leading-6 text-muted-foreground">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                          <span>{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardGlassContent>
+                </CardGlass>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

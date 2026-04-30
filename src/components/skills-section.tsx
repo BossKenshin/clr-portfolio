@@ -1,7 +1,7 @@
 import type { PortfolioData } from '@/lib/portfolio-data';
 import { Badge } from '@/components/ui/badge';
 import { CardGlass, CardGlassContent, CardGlassHeader, CardGlassTitle } from '@/components/card-glass';
-import { Code } from 'lucide-react';
+import { Code2 } from 'lucide-react';
 
 type SkillsSectionProps = {
   skills: PortfolioData['skills'];
@@ -9,36 +9,38 @@ type SkillsSectionProps = {
 };
 
 export function SkillsSection({ skills, title }: SkillsSectionProps) {
-  const validSkills = skills.filter(s => s.name && s.keywords.some(k => k));
+  const validSkills = skills.filter((s) => s.name && s.keywords.some(Boolean));
   if (validSkills.length === 0) return null;
 
   return (
-    <section id="skills" className="w-full py-12 md:py-24 lg:py-32">
+    <section id="skills" className="section-panel">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-accent">{title}</h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              The technologies and tools I'm proficient with.
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-10 max-w-3xl">
+            <p className="section-kicker">Technical Skills</p>
+            <h2 className="section-title">{title}</h2>
+            <p className="section-copy mt-4">
+              A practical stack for maintaining production systems, integrating APIs, and building business-facing applications.
             </p>
           </div>
-        </div>
-        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-6 py-12">
-          {validSkills.map((skillGroup, index) => (
-            <CardGlass key={index} className="flex flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)]">
-              <CardGlassHeader className='flex-row items-center gap-4'>
-                <div className="rounded-full bg-accent/20 p-3">
-                  <Code className="h-6 w-6 text-accent" />
-                </div>
-                <CardGlassTitle className="font-headline text-lg">{skillGroup.name}</CardGlassTitle>
-              </CardGlassHeader>
-              <CardGlassContent className="flex flex-wrap gap-2">
-                {skillGroup.keywords.filter(k => k).map((keyword, kIndex) => (
-                  <Badge key={kIndex} variant="secondary" className="text-sm transition-transform hover:scale-110">{keyword}</Badge>
-                ))}
-              </CardGlassContent>
-            </CardGlass>
-          ))}
+
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {validSkills.map((skillGroup) => (
+              <CardGlass key={skillGroup.name} className="flex min-h-56 flex-col">
+                <CardGlassHeader className="space-y-4">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                    <Code2 className="h-5 w-5" />
+                  </div>
+                  <CardGlassTitle className="font-headline text-lg">{skillGroup.name}</CardGlassTitle>
+                </CardGlassHeader>
+                <CardGlassContent className="flex flex-wrap gap-2">
+                  {skillGroup.keywords.filter(Boolean).map((keyword) => (
+                    <Badge key={keyword} variant="secondary" className="text-sm">{keyword}</Badge>
+                  ))}
+                </CardGlassContent>
+              </CardGlass>
+            ))}
+          </div>
         </div>
       </div>
     </section>
