@@ -6,6 +6,10 @@ import { cn } from '@/lib/utils';
 export const metadata: Metadata = {
   title: 'CLR Portfolio',
   description: "Christian Lawrence Rosales's developer portfolio.",
+  icons: {
+    icon: '/icon.png',
+    apple: '/apple-icon.png',
+  },
 };
 
 const themeScript = `
