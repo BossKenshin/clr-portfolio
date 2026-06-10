@@ -1,7 +1,8 @@
 import type { PortfolioData } from '@/lib/portfolio-data';
 import { CardGlass, CardGlassContent, CardGlassDescription, CardGlassHeader, CardGlassTitle } from '@/components/card-glass';
 import { Badge } from '@/components/ui/badge';
-import { Layers3 } from 'lucide-react';
+import { ExternalLink, Github, Layers3 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 type ProjectsSectionProps = {
   projects: PortfolioData['projects'];
@@ -35,12 +36,32 @@ export function ProjectsSection({ projects, title }: ProjectsSectionProps) {
                   <CardGlassTitle className="font-headline text-xl">{project.name}</CardGlassTitle>
                   <CardGlassDescription className="text-sm leading-6">{project.description}</CardGlassDescription>
                 </CardGlassHeader>
-                <CardGlassContent className="mt-auto">
+                <CardGlassContent className="mt-auto space-y-4">
                   <div className="flex flex-wrap gap-2">
                     {project.keywords.filter(Boolean).map((keyword) => (
                       <Badge key={keyword} variant="secondary">{keyword}</Badge>
                     ))}
                   </div>
+                  {(project.url || project.githubUrl) && (
+                    <div className="flex flex-wrap gap-2">
+                      {project.url && (
+                        <Button asChild variant="outline" size="sm">
+                          <a href={project.url} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="mr-2 h-4 w-4" />
+                            View App
+                          </a>
+                        </Button>
+                      )}
+                      {project.githubUrl && (
+                        <Button asChild variant="outline" size="sm">
+                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                            <Github className="mr-2 h-4 w-4" />
+                            View Code
+                          </a>
+                        </Button>
+                      )}
+                    </div>
+                  )}
                 </CardGlassContent>
               </CardGlass>
             ))}

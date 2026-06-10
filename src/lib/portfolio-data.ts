@@ -41,6 +41,7 @@ export interface PortfolioData {
       name: string;
       description: string;
       url: string;
+      githubUrl?: string;
       keywords: string[];
     }[];
     awards: {
@@ -129,6 +130,13 @@ export interface PortfolioData {
       }
     ],
     "projects": [
+      {
+        "name": "Manual Maestro",
+        "description": "A browser-based manual builder with live preview and one-click export to PDF or PowerPoint.",
+        "url": "https://manual-maestro.vercel.app/",
+        "githubUrl": "https://github.com/BossKenshin/studio",
+        "keywords": [ "Next.js", "React", "TypeScript", "Tailwind CSS", "PDF Export", "PowerPoint Export" ]
+      },
       {
         "name": "Sales Information System Web",
         "description": "A business web platform for managing sales workflows, reporting, and operational data using PHP, Laravel, CodeIgniter, and SQL.",
