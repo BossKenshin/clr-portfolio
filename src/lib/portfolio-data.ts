@@ -150,6 +150,12 @@ export interface PortfolioData {
         "keywords": [ "Flutter", "Dart", "Java", "BLoC", "Provider", "REST API" ]
       },
       {
+        "name": "Realtime Chat Application",
+        "description": "A mobile application that supports real-time messaging, user authentication, and push notifications for seamless communication.",
+        "url": "https://github.com/BossKenshin/chatappflutter.git",
+        "keywords": [ "Flutter", "Dart", "BLoC", "Provider", "Pusher", " Supabase" ]
+      },
+      {
         "name": "Internal Desktop Operations Tools",
         "description": "Desktop applications built for internal teams, focused on practical data entry, retrieval, and business process support.",
         "url": "",
