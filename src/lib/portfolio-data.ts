@@ -152,7 +152,8 @@ export interface PortfolioData {
       {
         "name": "Realtime Chat Application",
         "description": "A mobile application that supports real-time messaging, user authentication, and push notifications for seamless communication.",
-        "url": "https://github.com/BossKenshin/chatappflutter.git",
+        "url": "",
+        "githubUrl": "https://github.com/BossKenshin/chatappflutter.git",
         "keywords": [ "Flutter", "Dart", "BLoC", "Provider", "Pusher", " Supabase" ]
       },
       {
