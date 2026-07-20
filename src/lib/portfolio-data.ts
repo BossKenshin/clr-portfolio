@@ -43,6 +43,9 @@ export interface PortfolioData {
       url: string;
       githubUrl?: string;
       keywords: string[];
+      highlights?: string[];
+      hasphotos?: boolean;
+      photoFolder?: string;
     }[];
     awards: {
       title: string;
@@ -135,38 +138,67 @@ export interface PortfolioData {
         "description": "A browser-based manual builder with live preview and one-click export to PDF or PowerPoint.",
         "url": "https://manual-maestro.vercel.app/",
         "githubUrl": "https://github.com/BossKenshin/studio",
-        "keywords": [ "Next.js", "React", "TypeScript", "Tailwind CSS", "PDF Export", "PowerPoint Export" ]
+        "keywords": [ "Next.js", "React", "TypeScript", "Tailwind CSS", "PDF Export", "PowerPoint Export" ],
+        "hasphotos": false,
+        "photoFolder": ""
       },
       {
         "name": "Sales Information System Web",
         "description": "A business web platform for managing sales workflows, reporting, and operational data using PHP, Laravel, CodeIgniter, and SQL.",
         "url": "",
-        "keywords": [ "PHP", "Laravel", "CodeIgniter", "SQL", "Bootstrap" ]
+        "keywords": [ "PHP", "Laravel", "CodeIgniter", "SQL", "Bootstrap" ],
+        "hasphotos": false,
+        "photoFolder": "sales-information-system-web"
       },
       {
         "name": "Sales Information System Mobile App",
         "description": "A mobile application that supports field sales operations with backend connectivity, workflow updates, and real-time business data access.",
         "url": "",
-        "keywords": [ "Flutter", "Dart", "Java", "BLoC", "Provider", "REST API" ]
+        "keywords": [ "Flutter", "Dart", "Java", "BLoC", "Provider", "REST API" ],
+          "hasphotos": false,
+        "photoFolder": "sales-information-system-mobile"
       },
       {
         "name": "Realtime Chat Application",
         "description": "A mobile application that supports real-time messaging, user authentication, and push notifications for seamless communication.",
         "url": "",
         "githubUrl": "https://github.com/BossKenshin/chatappflutter.git",
-        "keywords": [ "Flutter", "Dart", "BLoC", "Provider", "Pusher", " Supabase" ]
+        "keywords": [ "Flutter", "Dart", "BLoC", "Provider", "Pusher", " Supabase" ],
+        "highlights": [
+          "Built real-time messaging with polished chat flows and stateful UI interactions.",
+          "Designed secure authentication and user experience patterns for a modern mobile app."
+        ],
+        "hasphotos": true,
+        "photoFolder": "chatappp-sc"
+      },
+      {
+        "name": "MotoCare Mobile Application",
+        "description": "A offline based mobile application that supports motorcycle maintenance tracking, service reminders, and repair history management for motorcycle owners.",
+        "url": "",
+        "githubUrl": "https://github.com/BossKenshin/moto-care-app.git",
+        "keywords": [ "Flutter", "Dart", "BLoC", "Provider", " SQLite" ],
+        "highlights": [
+          "Created a maintenance-focused app for vehicle tracking, service scheduling, and reminders.",
+          "Delivered an organized dashboard experience for service logs, expenses, and routine management."
+        ],
+        "hasphotos": true,
+        "photoFolder": "motocare-sc"
       },
       {
         "name": "Internal Desktop Operations Tools",
         "description": "Desktop applications built for internal teams, focused on practical data entry, retrieval, and business process support.",
         "url": "",
-        "keywords": [ "C#", ".NET", "MSSQL", "Stored Procedures" ]
+        "keywords": [ "C#", ".NET", "MSSQL", "Stored Procedures" ],
+        "hasphotos": false,
+        "photoFolder": "internal-desktop-operations-tools"
       },
       {
         "name": "AWS Application Infrastructure",
         "description": "Cloud infrastructure work for hosting, database management, object storage, DNS routing, and secure network configuration.",
         "url": "",
-        "keywords": [ "AWS EC2", "AWS RDS", "S3", "Route 53", "VPC" ]
+        "keywords": [ "AWS EC2", "AWS RDS", "S3", "Route 53", "VPC" ],
+        "hasphotos": false,
+        "photoFolder": "aws-application-infrastructure"
       }
     ],
     "awards": [
