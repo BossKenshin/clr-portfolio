@@ -13,14 +13,14 @@ export function SkillsSection({ skills, title }: SkillsSectionProps) {
   if (validSkills.length === 0) return null;
 
   return (
-    <section id="skills" className="section-panel">
+    <section id="skills" className="section-panel border-t border-border/60 bg-secondary/20">
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-6xl">
           <div className="mb-10 max-w-3xl">
             <p className="section-kicker">Technical Skills</p>
             <h2 className="section-title">{title}</h2>
             <p className="section-copy mt-4">
-              A practical stack for maintaining production systems, integrating APIs, and building business-facing applications.
+              A practical stack built for production systems, API integrations, and dependable user-facing applications.
             </p>
           </div>
 
@@ -28,14 +28,16 @@ export function SkillsSection({ skills, title }: SkillsSectionProps) {
             {validSkills.map((skillGroup) => (
               <CardGlass key={skillGroup.name} className="flex min-h-56 flex-col">
                 <CardGlassHeader className="space-y-4">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background text-foreground">
                     <Code2 className="h-5 w-5" />
                   </div>
                   <CardGlassTitle className="font-headline text-lg">{skillGroup.name}</CardGlassTitle>
                 </CardGlassHeader>
                 <CardGlassContent className="flex flex-wrap gap-2">
                   {skillGroup.keywords.filter(Boolean).map((keyword) => (
-                    <Badge key={keyword} variant="secondary" className="text-sm">{keyword}</Badge>
+                    <Badge key={keyword} variant="secondary" className="rounded-full border border-border bg-background px-3 py-1 text-xs uppercase tracking-[0.18em] text-foreground/80">
+                      {keyword}
+                    </Badge>
                   ))}
                 </CardGlassContent>
               </CardGlass>

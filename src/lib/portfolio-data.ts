@@ -13,6 +13,9 @@ export interface PortfolioData {
       location: {
         address: string;
       };
+      githubUrl?: string;
+      linkedInUrl?: string;
+      resumeUrl?: string;
     };
     education: {
       location: string;
@@ -71,7 +74,10 @@ export interface PortfolioData {
       "phone": "+639502693807",
       "location": {
         "address": "Cebu, Philippines"
-      }
+      },
+      "githubUrl": "https://github.com/BossKenshin",
+      "linkedInUrl": "https://www.linkedin.com/",
+      "resumeUrl": "#contact"
     },
     "education": [
       {
