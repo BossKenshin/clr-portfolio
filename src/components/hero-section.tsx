@@ -1,6 +1,6 @@
 import type { PortfolioData } from '@/lib/portfolio-data';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Github, Mail, MapPin, Phone } from 'lucide-react';
+import { ArrowRight, Download, Github, Mail, MapPin, Phone } from 'lucide-react';
 
 type HeroSectionProps = {
   basics: PortfolioData['basics'];
@@ -36,6 +36,14 @@ export function HeroSection({ basics }: HeroSectionProps) {
               <Button asChild variant="outline" size="lg">
                 <a href="#contact">Contact Me</a>
               </Button>
+              {basics.resumeUrl && (
+                <Button asChild variant="outline" size="lg">
+                  <a href={basics.resumeUrl} download target="_blank" rel="noreferrer">
+                    <Download className="h-4 w-4" />
+                    Download Resume
+                  </a>
+                </Button>
+              )}
               <Button asChild variant="outline" size="lg">
                 <a href={basics.githubUrl} target="_blank" rel="noreferrer">
                   <Github className="h-4 w-4" />
@@ -54,7 +62,7 @@ export function HeroSection({ basics }: HeroSectionProps) {
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="rounded-[18px] border border-border p-4">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-muted-foreground">Stack</p>
-                  <p className="mt-2 text-sm leading-7 text-muted-foreground">Javascript, Java, Laravel, Flutter, AWS</p>
+                  <p className="mt-2 text-sm leading-7 text-muted-foreground">Javascript, Java, PHP, Dart, AWS</p>
                 </div>
                 <div className="rounded-[18px] border border-border p-4">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-muted-foreground">Specialty</p>

@@ -77,7 +77,7 @@ export interface PortfolioData {
       },
       "githubUrl": "https://github.com/BossKenshin",
       "linkedInUrl": "https://www.linkedin.com/",
-      "resumeUrl": "#contact"
+      "resumeUrl": "/assets/CHRISTIAN_LAWRENCE_ROSALES%20-%20RESUME.pdf"
     },
     "education": [
       {

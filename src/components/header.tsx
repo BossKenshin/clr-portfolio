@@ -9,6 +9,7 @@ import { ThemeToggle } from '@/components/theme-toggle';
 
 type HeaderProps = {
   name: string;
+  resumeUrl?: string;
 };
 
 const navLinks = [
@@ -20,7 +21,7 @@ const navLinks = [
   { href: '#contact', label: 'Contact' },
 ];
 
-export function Header({ name }: HeaderProps) {
+export function Header({ name, resumeUrl }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const initials = name.split(' ').map(n => n[0]).join('');
 
@@ -52,9 +53,13 @@ export function Header({ name }: HeaderProps) {
           ))}
         </nav>
         <div className="ml-auto flex items-center gap-2">
-          <Button asChild size="sm" className="hidden md:inline-flex">
-            <a href="#contact">Resume</a>
-          </Button>
+          {resumeUrl && (
+            <Button asChild size="sm" className="hidden md:inline-flex">
+              <a href={resumeUrl} download target="_blank" rel="noreferrer">
+                Download Resume
+              </a>
+            </Button>
+          )}
           <ThemeToggle />
           <Sheet>
             <SheetTrigger asChild>
@@ -80,6 +85,17 @@ export function Header({ name }: HeaderProps) {
                     {link.label}
                   </a>
                 ))}
+                {resumeUrl && (
+                  <a
+                    href={resumeUrl}
+                    download
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    Download Resume
+                  </a>
+                )}
               </nav>
             </SheetContent>
           </Sheet>

@@ -76,7 +76,7 @@ export default function Home() {
   const validProjects = projects.filter(p => p.name && p.description);
   return (
     <div className="min-h-[100dvh] bg-background">
-      <Header name={basics.name} />
+      <Header name={basics.name} resumeUrl={basics.resumeUrl} />
       <main>
         <HeroSection basics={basics} />
         <RecruiterSnapshot />
