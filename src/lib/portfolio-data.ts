@@ -136,6 +136,10 @@ export interface PortfolioData {
       {
         "name": "Tools/Technologies",
         "keywords": [ "AWS (EC2, RDS, S3, Route 53, VPC)", "Git", "jQuery" ]
+      },
+      {
+        "name": "AI Tools",
+        "keywords": [ "Codex", "Cursor", "Claude" ]
       }
     ],
     "projects": [
